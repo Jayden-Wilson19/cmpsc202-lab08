@@ -1,6 +1,6 @@
 # Lab 08: Navigating Weighted Graphs with Dijkstra's Algorithm
 
-Name(s): _______________________  
+Name(s): Jayden Wilson 
 
 ## Introduction
 You are already familiar with Breadth-First Search (BFS) and Depth-First Search (DFS) for exploring graphs. However, what happens when all edges are not created equal? In this lab, we will explore Dijkstra's Algorithm, which allows us to find the shortest path between two vertices in a *weighted* graph.
@@ -15,13 +15,15 @@ BFS is excellent for finding the shortest path in an unweighted graph. Let's see
 
 **Questions:**
 1. If you run a standard BFS starting at Node $A$, looking for Node $D$, which path will the BFS algorithm discover first? Why?
-   > *Your answer here*
+   > BFS ignores edges and instead focuses on the nodes which will discover the path A -> D immediately as shown in the graph being the path with the fewest edges.
 
 2. What is the total weight of the path BFS found? What is the total weight of the alternative path? 
-   > *Your answer here*
+   > The path that BFS found (A -> D) total weight would be 100 as it's shown on the graph when following down that path. An alternative path for example would try to include all the nodes (A -> B -> C -> D) and since each path has number representing it, we would just add them to find the total weight (2 + 3 + 4). The total weight would be 9.
 
 3. How does the definition of "shortest path" change when moving from unweighted graphs to weighted graphs?
-   > *Your answer here*
+   > Unweighted graphs focuses on the path with the least amount of edges while a weighted graph focuses on the path with the lowest total edge weight. Using the path BFS found and the alternative path, we could easily label which one is weighted or unweighted.
+
+   The path that BFS found would be unweighted since it uses fewer edges, leaving the alternative path to be weighted because of its total weight.
 
 ---
 
