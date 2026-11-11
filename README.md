@@ -64,16 +64,16 @@ Dijkstra's algorithm relies on an assumption about the weights. Let's see what h
 Trace Dijkstra's algorithm starting from Node $A$ to find the shortest path to Node $C$.
 
 1. Which node does Dijkstra's algorithm visit first after $A$?
-   > *Your answer here*
+   > On the graph starting at a, we could go to either B or C. Since their's numbers representing the path Dijkstra's algorithm normally chooses the shortest path, that being B
 
 2. What will Dijkstra's algorithm declare as the shortest path to $C$, and what is its weight?
-   > *Your answer here*
+   > Dijkstra's algorithm will declare A as the shortest path to C. With its total weight being 5.
 
 3. Look at the graph manually. What is the *actual* shortest path from $A$ to $C$, and what is its total weight? 
-   > *Your answer here*
+   > The actual shortest path would be A -> B -> C with a total weight of -2 after adding the number of the paths together.
 
 4. **The Trap:** Explain exactly *why* Dijkstra's algorithm failed to find the correct shortest path in this scenario.
-   > *Your answer here*
+   > Dijkstra's algorithm finalized node C too early instead of seeing if their was any instances that were less then what was already shown.
 
 ---
 
