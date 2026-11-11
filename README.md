@@ -40,17 +40,17 @@ Starting at Node $A$, trace Dijkstra's algorithm. Fill in the tracker table belo
 *   **`dist` Array:** The current known shortest distance from $A$ to each node. Use $\infty$ for unreachable/unknown nodes.
 *   **`visited` Set:** The set of nodes that have been finalized and whose shortest distances are known.
 
-| Step | Current Node | Neighbors to Check | `dist` Map | `visited` Set | 
-| :--- | :--- | :--- | :--- | :--- | 
-| 0 | $A$ | $B$, $C$ | $A$:0, $B$:4, $C$:2 | { } | 
-| 1 | | | | | 
-| 2 | | | | | 
-| 3 | | | | | 
-| 4 | | | | | 
+| Step | Current Node | Neighbors to Check | `dist` Map                 | `visited` Set | 
+
+| 0    | $A$          | $B$, $C$           | $A$:0, $B$:4, $C$:2                | 0 | 
+| 1    | $C$          | $B$, $D$, $E$      | $A$:0, $B$:3, $C$:2, $D$:10, $E$:12| 2 | 
+| 2    | $B$          | $A$, $C$, $D$      | $A$:0, $B$:3, $C$:2, $D$:8, $E$:12 | 3 | 
+| 3    | $D$          | $B$, $C$, $E$      | $A$:0, $B$:3, $C$:2, $D$:8, $E$:10 | 8 | 
+| 4    | $E$          | $C$, $D$           | $A$:0, $B$:3, $C$:2, $D$:8, $E$:10 | 10 | 
 
 **Conceptual Question:**
 When we add a vertex to the "visited" set, why are we 100% certain we have found the absolute shortest path to that node? 
-> *Your answer here*
+> This is because Dijkstra's algorithm will alaways select the unvisited node with the smallest known distance.
 
 ---
 
