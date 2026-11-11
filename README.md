@@ -97,8 +97,8 @@ Standard Dijkstra's algorithm only understands *edges* and *edge weights*. It do
 
 1. How should you represent the paths with stairs in your graph so the algorithm never tries to use them?
 
-   > *Your answer here*
+   > Completely removing the edges between intersections that are connected only by stairs will cause the algorithm to never consider it as a valid path.
 
 2. How can you account for the $3$-minute waiting time at busy crosswalk intersections using *only* edge weights? (Hint: Think about how you could modify the weights of edges connecting to that intersection).
 
-   > *Your answer here*
+   > For every known busy crosswalk, we could add an additional 3 minutes at the intersection. This would immediately make the algorithm update its total travel time.
